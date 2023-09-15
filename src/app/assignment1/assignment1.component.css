@@ -1,0 +1,107 @@
+.qa-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .c-header,
+  .c-footer {
+    background: #EDD382;
+    text-align: center;
+    padding: 2em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.4em;
+    font-weight: 300;
+    line-height: 1.6em;
+    width: 90%;
+    margin: auto;
+  
+    h1,
+    h2,
+    p {
+      max-width: 40em;
+      margin: 0 auto;
+  
+      &:not(:last-child) {
+        margin-bottom: 1em;
+      }
+    }
+  
+    h1 {
+      text-transform: uppercase;
+      font-weight: 900;
+    }
+  
+    a {
+      color: #000;
+    }
+  }
+  
+  /* Basic styling for the entire div */
+  .beautiful-div {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Styling for the title within the div */
+  .div-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  /* Styling for the description text within the div */
+  .div-description {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+    padding: 10px 0;
+  }
+  
+  .qa-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 100%; /* Set a maximum width if needed */
+  }
+  
+  .question {
+    font-weight: bold;
+  }
+  
+  .answer {
+    margin-top: 10px;
+  }
+  
+  .medium-image {
+    max-width: 300px; /* Set the maximum width for medium-sized images */
+    height: auto; /* Maintain the image's aspect ratio */
+    display: block; /* Remove any residual inline styling */
+    margin: 10px auto; /* Center the image horizontally */
+  }
+  
+  div {
+    font-family: cursive, sans-serif;
+    background-color: #62519b;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 2px #b4e5f8;
+  }
+  
+  /* Remove margin-bottom for paragraphs */
+  p {
+    margin-bottom: 0;
+  }
+  

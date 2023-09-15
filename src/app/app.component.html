@@ -1,0 +1,65 @@
+<h1>Sohail</h1>
+<h2> {{title}} </h2>
+<h3 class="myname"> {{name}} </h3>
+<button (click)="toggleName()">ChangeName</button>
+<h2> {{obj.rno}} is {{obj.name}}</h2>
+<!----------
+<app-assignment1></app-assignment1>
+---------->
+<ul *ngIf="showElem" class="flowers">
+  <li *ngFor="let f of flowers">
+    <p>{{f}}</p>
+  </li>
+</ul>
+<button (click)="displayElem()">Toggle display</button>
+
+<div>
+  <table>
+    <thead>
+      <th>Sr. No</th>
+      <th>Name</th>
+      <th>No Of States</th>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let c of countries;let i = index">
+        <td>{{i+1}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.numberOfStates}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br>
+<br>
+
+<!-- <h4>{{student.name}} -- {{student.rno}}</h4>
+<h5 *ngIf="showArray">{{arr}}</h5>
+<button (click)="toggleArray()">Toggle Array Display</button>
+<ul>
+  <li> {{arr[0]}}</li>
+  <li>{{arr[1]}}</li>
+</ul>
+<ol>
+  <li></li>
+  <li></li>
+  <li></li>
+</ol> -->
+<div>
+  <input type="text" [(ngModel)]="myField">
+</div>
+<div>
+  <h2>{{myField}}</h2>
+</div>
+<button routerLink="/home">Home</button>
+<button routerLink="/aboutus">AboutUs</button>
+<button routerLink="/services">Services</button>
+<router-outlet></router-outlet>
+<h1>S2P EduTech</h1>
+
+
+
+
+
+
+<app-navbar [item]="currentItem" (messageEvent)="receiveMessage($event)"></app-navbar>
+<p>{{fromChildOutput}}</p>

@@ -1,0 +1,31 @@
+<header class="c-header">
+    <h1>Mohd Sohail Ali Khan</h1>
+    <h2>khansohail33624@gmail.com</h2>
+</header>
+
+
+<div class="qa-container box-shadow beautiful-div">
+    <div *ngFor="let item of qaList" class="qa-item">
+      <div class="question">
+        <p *ngFor="let paragraph of item.question.split('\n')">{{ paragraph }}</p>
+      </div>
+      <div class="answer">
+        <ng-container *ngIf="item.imageUrl">
+            <img src="{{ item.imageUrl }}" alt="Image" class="medium-image" />
+          </ng-container>
+        <!-- Split answer by paragraphs and iterate over them -->
+       <!---------- <p *ngFor="let paragraph of item.answer.split('\n')">{{ paragraph }}</p> --------------------->
+       <div *ngFor="let paragraph of item.answer.split('\n')">
+        <p>
+          <ng-container *ngFor="let part of paragraph.split('**'); let isBold = odd">
+            <ng-container *ngIf="isBold; else plainText">
+              <strong>{{ part }}</strong>
+            </ng-container>
+            <ng-template #plainText>{{ part }}</ng-template>
+          </ng-container>
+        </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  
